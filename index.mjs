@@ -1,5 +1,4 @@
-import * as Carousel from "./Carousel.js";
-import axios from "axios";
+import * as Carousel from "./Carousel.mjs";
 
 const breedSelect = document.getElementById("breedSelect");
 const infoDump = document.getElementById("infoDump");
