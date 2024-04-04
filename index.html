@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>R-ALAB 308A.4.1: Working with External Data</title>
+    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
 
     <!-- Bootstrap -->
@@ -14,6 +14,13 @@
 
     <!-- Our Styles -->
     <link href="styles.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -35,7 +42,7 @@
     <h2 class="w-100 text-center mt-5">Select a Breed</h2>
     <select
       id="breedSelect"
-      style="width: 400px;"
+      style="width: 300px;"
       class="form-select form-select-lg my-1 mx-auto"
       aria-label="form-select-lg"
     >
@@ -47,7 +54,7 @@
     </div>
 
     <!-- Carousel -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
       <div id="carouselInner" class="carousel-inner"></div>
       <button
         class="carousel-control-prev"
@@ -103,12 +110,5 @@
       </div>
     </template>
     <!-- Carousel Item Template -->
-
-    <!-- Bootstrap JS Bundle (Popper.js included) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/lEaaqOrL/jVjWNbcbvc5jpAEruMoeLRiSnrzjUwqfKVRzzyNr2nl4KdZeE0W4Tm"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

@@ -6,7 +6,8 @@ const infoDump = document.getElementById("infoDump");
 const progressBar = document.getElementById("progressBar");
 const getFavouritesBtn = document.getElementById("getFavouritesBtn");
 
-const API_KEY = "live_9NE96Ozt8hP6HX1i6P9DM3XYrPLlTGYu6Rqbd60huQT8LPJ2lt8LTxS8BcnFM43K";
+const API_KEY =
+  "live_9NE96Ozt8hP6HX1i6P9DM3XYrPLlTGYu6Rqbd60huQT8LPJ2lt8LTxS8BcnFM43K";
 
 axios.defaults.baseURL = "https://api.thecatapi.com/v1";
 axios.defaults.headers.common["x-api-key"] = API_KEY;
@@ -45,7 +46,11 @@ const buildCarousel = (data, favourites) => {
     Carousel.clear();
     infoDump.innerHTML = "";
     data.forEach((ele) => {
-      const item = Carousel.createCarouselItem(ele.url, breedSelect.value, ele.id);
+      const item = Carousel.createCarouselItem(
+        ele.url,
+        breedSelect.value,
+        ele.id
+      );
       Carousel.appendCarousel(item);
     });
     if (favourites) {
@@ -54,7 +59,8 @@ const buildCarousel = (data, favourites) => {
       const info = data[0].breeds || null;
       if (info && info[0].description) infoDump.innerHTML = info[0].description;
     } else {
-      infoDump.innerHTML = "<div class='text-center'>No information on this breed, sorry!</div>";
+      infoDump.innerHTML =
+        "<div class='text-center'>No information on this breed, sorry!</div>";
     }
     Carousel.start();
   } catch (error) {
@@ -74,15 +80,22 @@ axios.interceptors.request.use((request) => {
 axios.interceptors.response.use(
   (response) => {
     response.config.metadata.endTime = new Date().getTime();
-    response.config.metadata.durationInMS = response.config.metadata.endTime - response.config.metadata.startTime;
-    console.log(`Request took ${response.config.metadata.durationInMS} milliseconds.`);
+    response.config.metadata.durationInMS =
+      response.config.metadata.endTime - response.config.metadata.startTime;
+    console.log(
+      `Request took ${response.config.metadata.durationInMS} milliseconds.`
+    );
     document.body.style.cursor = "default";
     return response;
   },
   (error) => {
     error.config.metadata.endTime = new Date().getTime();
-    error.config.metadata.durationInMS = error.config.metadata.endTime - error.config.metadata.startTime;
-    console.error(`Request failed after ${error.config.metadata.durationInMS} milliseconds.`, error);
+    error.config.metadata.durationInMS =
+      error.config.metadata.endTime - error.config.metadata.startTime;
+    console.error(
+      `Request failed after ${error.config.metadata.durationInMS} milliseconds.`,
+      error
+    );
     document.body.style.cursor = "default";
     throw error;
   }
@@ -120,6 +133,5 @@ async function getFavourites() {
     console.error("Error getting favourites:", error);
   }
 }
-
 
 initialLoad();
