@@ -14,6 +14,7 @@ axios.defaults.headers.common["x-api-key"] = API_KEY;
 const initialLoad = async () => {
   try {
     const response = await axios.get("/breeds");
+    const breedSelect = document.getElementById("breedSelect");
     response.data.forEach((breed) => {
       const option = document.createElement("option");
       option.value = breed.id;
@@ -119,5 +120,6 @@ async function getFavourites() {
     console.error("Error getting favourites:", error);
   }
 }
+
 
 initialLoad();
