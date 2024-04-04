@@ -1,16 +1,3 @@
-/* 
-<h2 align="center">
-  ALAB-308A.4.1_Working-with-External-Data<br/>
-
-  <a href="https://hannah-moon.github.io/22_ALAB-308A.4.1_Working-with-External-Data/" target="_blank">Cat Bread</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="dcat.gif">
-</div>
-*/
-
-<br/>
-
 # R-ALAB 308A.4.1 - Working with External Data
 
 This graded assignment challenges you to create an interactive application using data from an external Application Programming Interface (API). In order to accomplish this task, you will employ the tools and techniques you have learned thus far, including fetch, Axios, and async/await syntax.
