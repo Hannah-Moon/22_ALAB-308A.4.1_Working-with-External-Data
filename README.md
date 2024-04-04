@@ -5,7 +5,7 @@
   <a href="https://hannah-moon.github.io/22_ALAB-308A.4.1_Working-with-External-Data/" target="_blank">Cat Bread</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="desktopview.gif">
+  <img alt="Demo" src="dcat.gif">
 </div>
 */
 
@@ -19,7 +19,7 @@ This graded assignment challenges you to create an interactive application using
 
 ## Demo
 
-<img alt="Demo" src="desktopview.gif">
+<img alt="Demo" src="cat.gif">
 
 
 ## Tech Stack
